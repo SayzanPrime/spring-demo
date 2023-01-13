@@ -21,7 +21,6 @@ public class UsersServiceImpl implements UsersService {
 
     @Override
     public UsersDto save(UsersDto usersDto) {
-        System.out.println("usersDto: " + usersDto);
         return usersMapper.toUsersDto(
                 usersRepository.save(
                         usersMapper.toUsers(usersDto)));
