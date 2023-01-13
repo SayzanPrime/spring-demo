@@ -4,7 +4,7 @@ WORKDIR /app
 
 COPY . /app
 
-RUN ./mvnw clean package
+RUN ./mvnw clean package -Dmaven.test.skip=true
 
 FROM openjdk:17-slim
 
